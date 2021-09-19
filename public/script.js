@@ -14,4 +14,9 @@ async function getMeal() {
   console.log(mealName);
   document.querySelector("#mealName").textContent = mealName;
   console.log(mealImage);
+
+  let img = document.createElement("img");
+  img.src = mealImage;
+  img.alt = mealName;
+  document.querySelector("body").appendChild(img);
 }
