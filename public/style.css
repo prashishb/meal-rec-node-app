@@ -37,8 +37,25 @@ h1 {
   margin: auto;
 }
 
+#ingredientsUl {
+  background: hsl(0, 0%, 100%);
+  width: 80%;
+  max-width: 37.5rem;
+  margin: auto;
+  border-radius: 0 0 1rem 1rem;
+  margin-top: 0;
+}
+
+#ingredientsUl li {
+  text-align: left;
+}
+
 @media (min-width: 37.5em) {
   #mealWrapper {
+    width: 60%;
+  }
+
+  #ingredientsUl {
     width: 60%;
   }
 
@@ -57,7 +74,7 @@ h1 {
 
 #mealImage {
   max-width: 100%;
-  border-radius: 0 0 1rem 1rem;
+  /* border-radius: 0 0 1rem 1rem; */
 }
 
 button {

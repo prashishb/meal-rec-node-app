@@ -38,4 +38,6 @@ async function getMeal() {
       break;
     }
   }
+
+  ingredientsUl.innerHTML = "<li>" + ingredients.join("</li><li>") + "</li>";
 }
