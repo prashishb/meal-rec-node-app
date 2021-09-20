@@ -13,8 +13,9 @@ document.querySelector("#btnLoad").addEventListener("click", () => {
 async function getMeal() {
   const response = await fetch("/meal");
   const data = await response.json();
-  let mealName = data.meals[0].strMeal;
-  let mealImage = data.meals[0].strMealThumb;
+  let meals = data.meals[0];
+  let mealName = meals.strMeal;
+  let mealImage = meals.strMealThumb;
 
   let mealNameDiv = document.createElement("div");
   mealNameDiv.id = "mealName";
@@ -26,4 +27,15 @@ async function getMeal() {
   img.src = mealImage;
   img.alt = mealName;
   document.querySelector("#mealWrapper").appendChild(img);
+
+  const ingredients = [];
+  for (let i = 1; i <= 20; i++) {
+    if (meals[`strIngredient${i}`]) {
+      ingredients.push(
+        `${meals[`strIngredient${i}`]} - ${meals[`strMeasure${i}`]}`
+      );
+    } else {
+      break;
+    }
+  }
 }

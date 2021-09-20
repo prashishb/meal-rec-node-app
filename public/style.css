@@ -48,8 +48,10 @@ h1 {
 }
 
 #mealName {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
   background: hsl(0, 0%, 100%);
-  padding: 0.25rem;
+  padding: 0.5rem;
   border-radius: 1rem 1rem 0 0;
 }
 
