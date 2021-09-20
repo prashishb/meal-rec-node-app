@@ -21,5 +21,5 @@ async function getMeal() {
   img.id = "mealImage";
   img.src = mealImage;
   img.alt = mealName;
-  document.querySelector("body").appendChild(img);
+  document.querySelector(".generator").appendChild(img);
 }
